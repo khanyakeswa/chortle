@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "db:migration:gen": "npx drizzle-kit generate:mysql --config=drizzle.config.ts",
+    "db:migration:push": "npx drizzle-kit push:mysql --config=drizzle.config.ts",
+    "db:migration:up": "npx drizzle-kit up:mysql --config=drizzle.config.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -26,6 +29,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "drizzle-kit": "^0.18.1",
     "prettier": "2.8.8"
   }
